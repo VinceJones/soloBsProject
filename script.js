@@ -34,7 +34,7 @@ function displayContent(results) {
 	$(".content").empty();
 	for (j = 0; j < results.length; j++){
 		$(".content").hide().append("<div class='col-md-3 results group" + results[j].id + "'><img class='hidden-sm hidden-xs' src='" + results[j].image.medium_url +"'/><br><button class='btn-success btn-sm minify'>Remove Item</button><button class='btn-info btn-sm showInfo'>Show Info</button></div>");
-		$(".group"+results[j].id).append("<div class='appendPlatform'><p class='lead'>Name: " + results[j].name + "</p><p>Description: " + results[j].deck +"</p><p>Platform: " + results[j].platforms[0].name + "</p><button class='btn-sm btn-danger removePlatform'>Remove Info</button></div>");
+		$(".group"+results[j].id).append("<div class='appendPlatform'><p class='lead'>" + results[j].name + "</p><p>Description: " + results[j].deck +"</p><p>Platform: " + results[j].platforms[0].name + "</p><button class='btn-sm btn-danger removePlatform'>Remove Info</button></div>");
 		$(".content").fadeIn("slow");
 		$(".results").css({height: '600px'});
 	}

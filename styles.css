@@ -14,15 +14,18 @@ body {
 }
 
 .results img {
+	border-radius: 10px;
 	height: 250px;
 	width: 250px;
 }
 
 .results {
-	border: 1px solid #A9CC66;
+	border: 1px solid #000000;
+	background-color: #D1570D;
+	color: #5A1F00;
 	border-radius: 10px;
-	margin: 50px 0 50px 0;
-	height: 600px;
+	margin: 10px 0 10px 0;
+	/*height: 600px;*/
 /*	width: 285px;*/
 	text-align: center;
 }
@@ -55,6 +58,7 @@ body {
 
 .logo {
 	display: block;
-	margin: 15px auto;
+	margin: 5px auto;
+	float: left;
 }
 
