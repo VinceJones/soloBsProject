@@ -1,8 +1,49 @@
-.container {
-	background-color: #730046;
+body {
+	background-color: #A9CC66;
 }
 
-img {
-	height: 100px;
-	width: 100px;
+.container {
+	background-color: #5A1F00;
 }
+
+.header {
+	margin-top: 10px;
+	background-color: #477725;
+}
+
+.results img {
+	height: 250px;
+	width: 250px;
+}
+
+.results {
+	border: 1px solid #A9CC66;
+	border-radius: 10px;
+	margin: 50px 0 50px 0;
+	height: 600px;
+	width: 285px;
+	text-align: center;
+}
+
+.content {
+	color: #FDE792;
+}
+
+.hidden {
+	display: none;
+}
+
+.minify {
+	color: #D1570D;
+}
+
+.returnContent {
+	display: block;
+	float: right;
+}
+
+.mindblow {
+	display: block;
+	margin: 15px auto;
+}
+
