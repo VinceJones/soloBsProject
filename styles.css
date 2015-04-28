@@ -1,5 +1,6 @@
 body {
 	background-color: #A9CC66;
+	font-family: 'Bree Serif';
 }
 
 .container {
@@ -8,6 +9,7 @@ body {
 
 .header {
 	margin-top: 10px;
+	margin-bottom: 10px;
 	background-color: #477725;
 }
 
@@ -21,7 +23,7 @@ body {
 	border-radius: 10px;
 	margin: 50px 0 50px 0;
 	height: 600px;
-	width: 285px;
+/*	width: 285px;*/
 	text-align: center;
 }
 
@@ -43,6 +45,15 @@ body {
 }
 
 .mindblow {
+	display: block;
+	margin: 15px auto;
+}
+
+.header h1 {
+	text-align: center;
+}
+
+.logo {
 	display: block;
 	margin: 15px auto;
 }

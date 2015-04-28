@@ -32,8 +32,8 @@ function searchCallback(results) {
 
 function displayContent(results) {
 	$(".content").empty();
-	for (j = 0; j < 9; j++){
-		$(".content").hide().append("<div class='col-md-3 results group" + results[j].id + "'><img class='hidden-sm hidden-xs' src='" + results[j].image.medium_url +"'/><button class='btn-success btn-sm minify'>Remove</button></div>");
+	for (j = 0; j < results.length; j++){
+		$(".content").hide().append("<div class='col-md-3 results group" + results[j].id + "'><img class='hidden-sm hidden-xs' src='" + results[j].image.medium_url +"'/><br><button class='btn-success btn-sm minify'>Remove Item</button><button class='btn-info btn-sm showInfo'>Show Info</button></div>");
 		$(".group"+results[j].id).append("<div class='appendPlatform'><p class='lead'>Name: " + results[j].name + "</p><p>Description: " + results[j].deck +"</p><p>Platform: " + results[j].platforms[0].name + "</p><button class='btn-sm btn-danger removePlatform'>Remove Info</button></div>");
 		$(".content").fadeIn("slow");
 		$(".results").css({height: '600px'});
@@ -43,8 +43,12 @@ function displayContent(results) {
 
 $(document).ready(function() {
 
-	$(".content").append("<h2>Please wait....</h2><br><img class='mindblow' src='mindblow.png'/>")
-	search("batman");
+	$(".header").on("click", ".searchBtn", function() {
+		$(".content").append("<h2>Please wait....</h2><br><img class='mindblow' src='mindblow.png'/>");
+		var searchVal = $(".searchField").val();
+		console.log(searchVal);
+		search(searchVal);
+	});
 
 	$(".content").on("click", ".minify", function (){
 		$(this).parent().fadeOut("slow");
@@ -59,10 +63,16 @@ $(document).ready(function() {
 		$(".results").children().children().fadeIn("fast");
 		});
 
-	$(".content").on("click", ".results", function(){
+	$(".content").on("click", ".showInfo", function(){
+		console.log("Show Info");
+		$(this).siblings().fadeIn();
+		//$(this).siblings(".appendPlatform").css({height: '600px'});
+	});
+
+	$(".content").on("click", ".removePlatform", function(){
 		console.log("Remove Platform");
-		$(this).children().children().fadeOut();
-		$(this).css({height: 'auto'});
+		$(this).parent().fadeOut();
+		//$(this).parent().css({height: 'auto'});
 	});
 
 	
